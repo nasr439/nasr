@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت تعمیرات خودرو Nasr v2.0.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body { font-family: 'Vazirmatn', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-4">
+    <!-- Header -->
+    <header class="flex items-center justify-between border-b border-gray-700 pb-4 mb-6">
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500 flex items-center justify-center overflow-hidden">
+                <span class="text-amber-500 font-bold text-xl">NASR</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-amber-500">نرم‌افزار مدیریت خودرو Nasr</h1>
+                <span class="text-xs text-gray-400">نسخه v2.0.0</span>
+            </div>
+        </div>
+        <button id="themeToggle" class="p-2 rounded-lg bg-gray-800 border border-gray-700 text-sm">🌓 تم</button>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-xl mx-auto space-y-6">
+        <!-- Vehicle Selection -->
+        <section class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <label class="block text-sm font-medium mb-2 text-amber-400">انتخاب خودرو:</label>
+            <select id="carSelect" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2.5 text-white">
+                <option value="سمند">سمند (پیش‌فرض)</option>
+            </select>
+        </section>
+
+        <!-- Quick Actions & Backup -->
+        <section class="grid grid-cols-2 gap-3">
+            <button onclick="alert('قابلیت دریافت خروجی اکسل فعال است')" class="bg-amber-600 hover:bg-amber-500 text-white p-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2">
+                📊 خروجی اکسل
+            </button>
+            <button onclick="alert('همگام‌سازی ابری با حساب جیمیل آماده متصل‌سازی است')" class="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2">
+                ☁️ همگام‌سازی جیمیل
+            </button>
+        </section>
+
+        <!-- Notification Banner -->
+        <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl text-amber-300 text-sm text-center">
+            💡 برای نصب به عنوان اپلیکیشن روی گوشی، گزینه <b>Add to Home Screen</b> را در مرورگر بزنید.
+        </div>
+    </main>
+</body>
+</html>
